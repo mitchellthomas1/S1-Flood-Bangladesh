@@ -1,4 +1,5 @@
 import ee
+ee.Initialize()
 from createtimeseries import make_s1_ts
 
 # name of adminstrative unit in Bangladesh

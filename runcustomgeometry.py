@@ -6,7 +6,7 @@ custom_roi =  ee.Geometry.Polygon(
         [[[89.60290221563474, 24.5689522895152],
           [89.60290221563474, 24.278860653015048],
           [89.90777282110349, 24.278860653015048],
-          [89.90777282110349, 24.5689522895152]]], null, false)
+          [89.90777282110349, 24.5689522895152]]], None, False)
 # A name/description for the area
 admin_level = 'sirajganj_custom_roi'
 
