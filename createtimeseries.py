@@ -284,7 +284,7 @@ def make_s1_ts(study_area, area_descrip,targdates, setScale, basedates = None, b
 #        add orbital direction
         orbits= ee.ImageCollection("COPERNICUS/S1_GRD").filterDate(targstart, targend).filterBounds(study_feature.geometry())\
                             .aggregate_array('orbitProperties_pass').getInfo()
-        pd_dict = {"Dates": dates, "Flooded Area (m^2)": vals, "Fractional flooded Area" : ratios,'orbitalDirection':orbits[:i+1]}
+        pd_dict = {"Dates": dates, "Flooded Area (m^2)": vals, "Fractional Flooded Area" : ratios,'orbitalDirection':orbits[:i+1]}
         df = pd.DataFrame.from_dict(pd_dict, orient = "columns")
         df.to_csv( csv_filename, index = False)
 

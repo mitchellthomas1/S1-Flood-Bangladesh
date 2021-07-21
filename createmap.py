@@ -104,7 +104,6 @@ def make_map_image(roi, start, end, scale, export_folder , descrip_str = '', bas
 
     # classify a flood image
     flood_image = classify_image(z_image, s1_image)
-    print(flood_image.getInfo())
 
     # Export to drive
     task = ee.batch.Export.image.toDrive(image=flood_image,  # an ee.Image object.
