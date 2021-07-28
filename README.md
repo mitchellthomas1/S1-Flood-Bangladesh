@@ -7,19 +7,19 @@ An account on the GEE is required to use S1-Flood-Bangladesh. To sign up for an 
 
 
 ## Instructions
-S1-Flood-Bangladesh offers several tools to implement the algorithm for Sentinel-1 based flood mapping described in Thomas et al. (In Review). 
-The repo allows a user to create and export a single flood map or a flooded area time series using the algorithm.
+S1-Flood-Bangladesh offers several tools to implement the algorithm for Sentinel-1 based flood mapping described in Thomas et al. (Submitted). 
+The repo allows a user to create and export a single flood map or a flooded area time series for a given geometry using the algorithm.
 
 ### Make a flood map
 The script **createmap.py** houses tools to create a single flood map. The function **make_map_image()** in this script creates and exports this flood map to Google Drive. 
 
 **make_map_image()** takes an ROI (ee.Geometry object), a start (inclusive) and end (exclusive) date for the study period (latest pixel is taken within this range),
-a scale for exporting (10 is recommended but a larger value will export more quickly), and a folder to export to in Google Drive.
+a scale for exporting (10 is recommended, but a larger value will export more quickly, but with errors in results due to resampling), and a folder to export to in Google Drive.
 
 The script **makemapexample** shows this function being used over a flood in Sirajganj district, 2019, in Bangladesh.
 
 ### Make a flood time series
-The goal of this algorithm is ultimately to provide a reliable and consistent surface water time series. 
+The goal of this algorithm is ultimately to provide a reliable and consistent surface water time series for a geometry or set of geometries. 
 
 The script **createtimeseries.py** houses the code to make this time series. Due to Earth Engine limitations, this script is designed
 to run mostly client side and make many successive calls to the server side. Generally this goes aginst Earth Engine recommendations,
