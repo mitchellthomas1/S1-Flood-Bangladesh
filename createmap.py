@@ -105,7 +105,7 @@ def make_map_image(roi, start, end, scale, export_folder , descrip_str = '', bas
     # classify a flood image
     flood_image = classify_image(z_image, s1_image)
 
-    # Export to drive
+#     Export to drive
     task = ee.batch.Export.image.toDrive(image=flood_image,  # an ee.Image object.
                                      region=roi,  # an ee.Geometry object.
                                      description= 'S1FloodMap' + descrip_str,
@@ -113,9 +113,17 @@ def make_map_image(roi, start, end, scale, export_folder , descrip_str = '', bas
                                      fileNamePrefix= 'S1FloodMap' + descrip_str,
                                      scale=scale,
                                      crs='EPSG:4326')
+    
+    # Export to Asset
+#    task = ee.batch.Export.image.toAsset(image=flood_image,  # an ee.Image object.
+#                                     region=roi,  # an ee.Geometry object.
+#                                     description= 'S1FloodMap' + descrip_str,
+#                                     assetId= 'users/mlt2177/S1FloodMap' + descrip_str,
+#                                     scale=scale,
+#                                     crs='EPSG:4326')
         
 
-
+    task.start()
 
     return task
 
