@@ -1,7 +1,7 @@
 # S1-Flood-Bangladesh
 Data creation tools for running Sentinel-1 flood algorithm for index insurnace applications described in Thomas et al. (In Review).
 
-Contact: Please contact Mitchell Thomas **(mlt2177@columbia.edu)** with any questions or concerns.
+Contact: Please contact Mitchell Thomas **(mlt2177@columbia.edu)** and Beth Tellman **(btellman@arizona.edu)** with any questions or concerns.
 
 An account on the GEE is required to use S1-Flood-Bangladesh. To sign up for an account, go to https://earthengine.google.com.
 
